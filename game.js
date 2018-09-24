@@ -12,7 +12,7 @@
 	    
 
 		function checkWinner(){
-			for(var i=1; i<=9; 1++){
+			for(i=1; i<=9; i++){
 				squaers[i] = document.getElementById('A'+i).innerHTML;
             }
 
@@ -35,7 +35,7 @@
             	alert('player ' + squaers[1] + 'wins the game');
             	reset(1,4,7);
             }
-                        if(squaers[2==squaers[5] && squaers[5]==squaers[8] && squaers[2]!=""){
+                        if(squaers[2]==squaers[5] && squaers[5]==squaers[8] && squaers[2]!=""){
             	alert('player ' + squaers[2] + 'wins the game');
             	reset(2,5,8);
             }
@@ -44,7 +44,7 @@
             	reset(3,6,9);
             }
 
-            //check degenal
+            //check diagonal
                         if(squaers[1]==squaers[5] && squaers[5]==squaers[9] && squaers[1]!=""){
             	alert('player ' + squaers[1] + 'wins the game');
             	reset(1,5,9);
@@ -55,7 +55,8 @@
             }
 
 		}
-        function insert(id){
+
+    function insert(id){
         	var s = document.getElementById(id);
 	        if(turn && s.innerHTML==""){
 		       s.innerHTML="X";
